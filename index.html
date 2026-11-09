@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GPU Cloth · WebGPU</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="canvas"></canvas>
+  <div id="panel">
+    <div class="head">
+      <strong>GPU Cloth</strong>
+      <button id="hide" title="Show or hide">☰</button>
+    </div>
+    <div class="body">
+      <label>Scene <select id="scene"></select></label>
+      <label>Fabric <select id="fabric"></select></label>
+      <label>Resolution <select id="res"></select></label>
+      <label class="row"><input type="checkbox" id="self" checked> Cloth-cloth collision</label>
+      <label>Wind <input type="range" id="wind" min="0" max="3" step="0.05" value="1"></label>
+      <div class="buttons"><button id="pause">Pause</button><button id="reset">Reset</button></div>
+      <div id="stats" class="small"></div>
+      <div id="info" class="small"></div>
+      <p class="small help">
+        Left drag: pull the cloth.<br>
+        Right drag or Ctrl + drag: orbit.<br>
+        Shift + drag: pan. Wheel: zoom.<br>
+        Space: pause. R: reset.
+      </p>
+    </div>
+  </div>
+  <pre id="error" hidden></pre>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
